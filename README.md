@@ -12,7 +12,7 @@ be displayed with the word in capital letters; otherwise, an error message must 
 
 ## Example of Usage
 
-![image](https://github.com/camilagrandinii/Epitech-C-Test/assets/83710007/7cca4738-58a2-4d15-aac0-dfc6d2e59647)
+![image](https://github.com/camilagrandinii/Epitech-C-Test/assets/83710007/6b1c0bb1-7a62-4a59-b266-bc5a0cc49cc9)
 
 <h2>Find me Here!</h2>
 <div> 
