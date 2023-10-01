@@ -1,7 +1,7 @@
 ### Hi, I'm Camila Grandini, Computer Science student from PUC Minas.👋
 
 
-- 📖 This repository was created to create a code in order to simulate the game named "Boogle" and there were some restrictions, listed in the following topics.
+- 📖 This repository was created to to simulate the game named "Boogle" using the language C. Also, there were some restrictions, listed in the following topics.
 - It should be possible to validate words through command line inputs. To validate words, the letters must be side to side.
 - A letter cannot be used more than once in a word.
 - The program should look for a word, entered on the standart input, within such a grid. If found, the grid must
