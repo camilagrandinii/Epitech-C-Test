@@ -97,28 +97,28 @@ void toMatrix(char matrix[][rolsAndCols], char str[]) {
     }
 }
 
-// char* cleanString(char string[]) {
-//     int length = strlen(string);
+char* cleanString(char string[]) {
+    int length = strlen(string);
 
-//     if (length <= 2) {
-//         return strdup(string);
-//     }
+    if (length <= 2) {
+        return strdup(string);
+    }
 
-//         char* newString = (char*)malloc(length - 2);
+        char* newString = (char*)malloc(length - 2);
 
-//         if (newString == NULL) {
-//             perror("Erro na alocação de memória");
-//             exit(EXIT_FAILURE);
-//         }
+        if (newString == NULL) {
+            perror("Erro na alocação de memória");
+            exit(EXIT_FAILURE);
+        }
 
-//         for (int i = 3; i < length - 3; i++) {
-//             newString[i-3] = string[i];
-//         }
+        for (int i = 3; i < length - 3; i++) {
+            newString[i-3] = string[i];
+        }
 
-//         newString[length - 2] = '\0';
+        newString[length - 2] = '\0';
 
-//     return newString;
-// }
+    return newString;
+}
 
 int main(int argc, char *argv[]) {
     int opt;
@@ -147,14 +147,23 @@ int main(int argc, char *argv[]) {
     rolsAndCols = size;
 
     char matrixGrid[size][size];
-    
-    if((strlen(grid)) != (size*size)){
+
+    if((strlen(grid)) != (size*size) && strlen(grid) != (((size*size) + 6))){
         fprintf(stderr, "ERROR: The string provided doesn't contain the amount of characters necessary!!!\n");
         
         exit(EXITERRORCODE);
     }
 
-    toMatrix(matrixGrid, grid);
+    char *newGrid;
+
+    if(strlen(grid) == ((size*size) + 6)){
+        newGrid = cleanString(grid);
+    }
+    else{
+        newGrid = grid;
+    }
+
+    toMatrix(matrixGrid, newGrid);
 
     char newWord[20];
 
